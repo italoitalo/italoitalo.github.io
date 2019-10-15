@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Quadro e cia - Criação de site</title>
+  <meta name="description" content="Criação de Sites Responsivos, Otimizados para Buscadores com visual bonito." />
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <link rel="shortcut icon" type="logo.png" href="img/logo.png">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
+  <script>
+    window.onload = function() {
+    var recaptcha = document.forms["form"]["g-recaptcha-response"];
+    recaptcha.required = true;
+    recaptcha.oninvalid = function(e) {
+    // fazer algo, no caso to dando um alert
+    alert("Por favor complete o captchaba");
+      }
+   }
+   </script>
+</head>
+
+<body>
+	<?php 
+if(isset($_GET['msg'])){
+    echo "<script type="text/javascript"> alert('" . $_GET['msg'] . "'); </script>";
+}
+?>
+	<div class="wrapper">
+		<header>
+			<div class="texto">
+			Crie seu site com a gente!
+			</div>
+			<nav>
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+				<div class="logo">
+					LOGO					
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#criar-site">Criação de sites</a></li>
+						<li><a href="#">logotipos</a></li>
+						<li><a href="#">Produção de video</a></li>
+						<li><a href="#dark">Fale conosco</a></li>
+						
+					</ul>
+				</div>
+			</nav>
+		</header>
+	</div>
+	<!---<div class="parallax1">
+		<div class="heading">
+			parallax
+		</div>
+	</div>-->
+	<section id="criar-site">
+		<h1>Solicite seu orçamento para criação do seu site</h1>
+		<div class="two-col">
+			<p>
+				<ul>
+					<h3>Comece agora a vender online com o seu proprio E-commerce</h3>
+						<li>
+							<h4>administração fácil e pratica</h4>
+							adicione produtos, crie cupons de descontos e gerencie todos os aspectos dos seus produtos.
+						</li>
+						<li>
+							<h4>A criação do site tambem inclui alguns itens</h4>
+							fornecemos um ano de: hospedagem + dominio +  famoso cadeadinho (https).
+						</li>
+						<li>
+							<h4>Responsivo abre até no seu celular</h4>				
+							Tenha um site profissional que abre em diferentes telas e plataformas.
+						</li>
+				</ul>
+			</p>
+		</div>
+		<div class="two-col">
+			<p>
+				<ul>
+					<h3>Crie seu blog ou portifolio online</h3>
+					<li>
+						<h4>Ganhe uma vantage no mercado de trabalho</h4>
+						Use seu site pessoal para ter um diferencial em seu curriculo. 					
+					</li>
+					<li>
+						<h4>Ganhe dinheiro fazendo o que gosta</h4>
+						Nós oferecemos suporte para colocar anuncios em seu site e ganhe dinheiro com a visualizações do seu site!
+					</li>
+				</ul>
+			</p>
+		</div>	
+
+	</section>
+	<div class="parallax2">
+		<div class="heading-sm">
+			Fire Works
+		</div>
+	</div>
+
+	<section class="dark"> 
+		<h2>Como parallax funciona</h2>
+		<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+		
+	</section>
+	<div class="parallax3">
+		
+	</div>
+	<div class="dark" id="dark">
+		<h3>fundo fixado do scroll</h3>
+		<div class="two-col">
+			<p>
+				Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos,
+			</p>
+		</div>
+		<div class="two-col">
+		<p>
+				Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos,
+			</p>
+		</div>		
+	</div>
+	<div id="parallax4" class="parallax4">
+		<div id="form" class="container">
+			Entre em contato com a gente!
+			<form action="enviar.php" class="form-contact" method="post" tabindex="1" id="form" name="form">  
+		    	<input type="text" class="form-contact-input" name="nome" placeholder="Nome" id="nome" required /> 
+		    	<input type="tel" class="form-contact-input" name="tel" placeholder="Telefone" id="tel" />		    	 
+		    	<input type="email" class="form-contact-input" name="email" placeholder="Email" id="email" required />  
+		    	<input type="text" class="form-contact-input" name="assunto" placeholder="Assunto" id="Assunto" required />  
+  		    	<textarea class="form-contact-textarea" name="mensagem" placeholder="Deixe uma mensagem" id="mensagem" required></textarea>
+		    	<div class="g-recaptcha" data-sitekey="6LduraAUAAAAADNnQe59umJq2m88IryhHK8dEche" required></div>  
+		    	<button type="submit" class="form-contact-button">Enviar</button>  
+ 			</form> 	
+		</div>		
+	</div>
+
+<!--- Check out my course on Udemy! -->
+<!---<div class="udemy-course" style="position: fixed; bottom: 0; right: 0; margin-bottom: -4px; z-index: 100;">
+	<a href="http://bit.ly/advanced-bootstrap-course" target="_blank" style="z-index: 999!important; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/nuno-udemy-banner.png" style="max-width: 100%; min-width: 100%;"></a>
+</div>
+-->
+<script type="text/javascript">
+	//menu toglle button
+    $(document).ready(function() {
+    	$(".menu-icon").on("click", function() {
+        	$("nav ul").toggleClass("showing");
+        });
+     });
+      // Scrolling Effect
+	$(window).on("scroll", function() {
+        if($(window).scrollTop()) {
+               $('nav').addClass('black');
+            }
+
+            else {
+                $('nav').removeClass('black');
+            }
+      })
+
+
+
+</script>
+</body>
+</html>
